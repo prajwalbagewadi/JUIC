@@ -112,3 +112,49 @@ VNode v = new VNode("div")
 ```
 
 # public class Renderer:
+
+````
+public class Renderer {
+    //Static method, can be called directly by class.
+    public Static String render(VNode node) {
+
+        //check if node is null.
+        if(node == null) {
+            return "";
+        }
+
+        //create a mutable string object.
+        StringBuilder html = new StringBuilder();
+
+        //Appending before the opening tag.
+        html.append("\n<").append(node.tag);
+
+        //Appending attributes
+        /*
+            - for-each loop over hashmap, and each temp extracted element is stored in (entry).
+
+            - Your Map (node.attrib)
+                ```
+                    attrib = {
+                        "class" = "container",
+                        "id" = "main"
+                    }
+                ```
+            - (node.attrib.entrySet()) -> Converts Map -> Set of Key-Val pairs.
+                ```
+                    [
+                        ("class", "container"),
+                        ("id", "main")
+                    ]
+                ```
+        */
+        for(Map<String, String> entry: node.attrib.entrySet()) {
+            html.append(" ")
+                .append(entry.getKey())
+                .append("=\"")
+                .append(entry.getValue())
+                .append("\"");
+        }
+    }
+}
+````
