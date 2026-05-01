@@ -1,4 +1,33 @@
-# VNode (Tree node)
+# Creating a Maven Project:
+
+- As my end goal is to create a library, not an app.
+- My goal is:
+
+```
+//XML
+<dependency>
+  <groupId>com.juic</groupId>
+  <artifactId>juic-core</artifactId>
+  <version>1.0.0</version>
+</dependency>
+```
+
+- That is possible with Maven (or Gradle).
+- _Without Maven:_
+  - You just have .java files
+  - Not reusable
+  - Not installable
+
+- _Creating is Maven Project:_
+- New Project -> Generators -> Maven Archtype.
+- Name: Juic
+- Archetype: maven-archetype-quickstart
+- Advanced Settings:
+- GroupId: com.juic
+- ArtifactId: juic-core
+- Version: 1.0.0
+
+# public class VNode (Tree node):
 
 - We need to create tree structure for our UI framework.
 - As the Html Dom represents a tree structure.
@@ -20,6 +49,7 @@ class Node {
 - Creating a VNode class for the framework:
 
 ```
+//VNode.java
 class VNode {
     //Access specifier Default(None)
     String tag; //html tag
@@ -48,7 +78,7 @@ class VNode {
         @return this node
     */
     public VNode setAttrib(String key, String val) {
-        this.attrib.put(key,val)
+        this.attrib.put(key,val);
         return this; //return the current calling node.
     }
 
@@ -80,3 +110,5 @@ VNode v = new VNode("div")
     .setText("Hello")
     .setAttrib("class","box");
 ```
+
+# public class Renderer:

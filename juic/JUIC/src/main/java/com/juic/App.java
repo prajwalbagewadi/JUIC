@@ -13,7 +13,7 @@ public class App
         System.out.println( "Hello World!" );
 
         VNode app = new VNode("div")
-                .setProps("class","container")
+                .setAttrib("class","container")
                 .addChild(new VNode("h1").setText("Hello JUIC"))
                 .addChild(new VNode("p").setText("This is my framework"));
 
