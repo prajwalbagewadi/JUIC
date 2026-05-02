@@ -25,7 +25,7 @@ public class VNode {
      */
     public VNode setText(String text) {
         this.text = text;
-        return this; //return the current calling node.
+        return this; //return to the current calling node.
     }
 
     /**
@@ -34,7 +34,7 @@ public class VNode {
      */
     public VNode setAttrib(String key, String val) {
         this.attrib.put(key,val);
-        return this; //return the current calling node.
+        return this; //return to the current calling node.
     }
 
     /**
@@ -43,7 +43,7 @@ public class VNode {
      */
     public VNode addChild(VNode child) {
         this.childern.add(child);
-        return this;
+        return this; //return to the current calling node.
     }
 }
 

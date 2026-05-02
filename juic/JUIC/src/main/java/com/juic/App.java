@@ -10,8 +10,7 @@ import com.juic.Core.VNode;
 public class App 
 {
     public static void main( String[] args ) {
-        System.out.println( "Hello World!" );
-
+        System.out.println("Hello World app running\n");
         VNode app = new VNode("div")
                 .setAttrib("class","container")
                 .addChild(new VNode("h1").setText("Hello JUIC"))

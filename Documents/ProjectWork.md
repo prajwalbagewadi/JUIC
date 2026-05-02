@@ -113,10 +113,14 @@ VNode v = new VNode("div")
 
 # public class Renderer:
 
+- The Renderer class Renders the User inputed VNode tree structure.
+- And converts it to a Simple html String.
+
 ````
+//Renderer.java
 public class Renderer {
     //Static method, can be called directly by class.
-    public Static String render(VNode node) {
+    public static String render(VNode node) {
 
         //check if node is null.
         if(node == null) {
@@ -126,7 +130,7 @@ public class Renderer {
         //create a mutable string object.
         StringBuilder html = new StringBuilder();
 
-        //Appending before the opening tag.
+        //Appending '<' opening bracket before the opening tag.
         html.append("\n<").append(node.tag);
 
         //Appending attributes
@@ -148,13 +152,41 @@ public class Renderer {
                     ]
                 ```
         */
-        for(Map<String, String> entry: node.attrib.entrySet()) {
+        //Map.Entry<k,v>: static interface nested interface within Map, interface that represents a single key-value pair.
+        for(Map.Entry<String, String> entry: node.attrib.entrySet()) {
             html.append(" ")
                 .append(entry.getKey())
                 .append("=\"")
                 .append(entry.getValue())
                 .append("\"");
         }
+
+        //appending '>' closing bracket
+        html.append(">");
+
+        //Adding Text
+        if(node.text != null) {
+            //check if text is not null to add text.
+            html.append(node.text);
+        }
+
+        //Adding Childern
+        for(VNode child: node.childern) {
+            //Recursive call to render function to render child nodes/tags and add it in the tree.
+            html.append(render(child));
+        }
+
+        //Adding closing tag
+        html.append("</").append(node.tag).append(">");
+
+        //returing html String
+        return html.toString();
     }
 }
 ````
+
+## Question to Chatgpt:
+
+- _what is this As React has index.html with div id = root, how can I make a similar page for my juic framework in documentation terms?_
+
+- Basically trying to re-create the React mounting mechanism in your own framework.
