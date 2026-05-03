@@ -29,9 +29,34 @@
 
 # public class VNode (Tree node):
 
-- We need to create tree structure for our UI framework.
-- As the Html Dom represents a tree structure.
-- In DS terms we need a Tree structure.
+- _VNode:_ represents a single node in the virtual UI tree used by 'Juic framework'.
+- Models the structure of the UI as a tree of nodes.
+- Mirrors the hierarchical nature of the HTML DOM.
+- Stores element type, attributes(props), text content and child nodes.
+- Serves as the core data structure for building and rendering UI.
+
+- _Description:_
+- In Juic, the UI is represented as a tree of VNode objects, similar to how the browser represents HTML as a DOM tree.
+- Each VNode corresponds to an element and can contain child nodes, forming a recursive structure.
+
+- _Example:_
+
+```
+//Java
+VNode app = new VNode("div")
+    .addChild(new VNode("h1").setText("hello"))
+    .addChild(new VNode("p").setText("Welcome"));
+```
+
+- This represents:
+
+```
+//HTML
+<div>
+    <h1>hello</h1>
+    <p>Welcome</p>
+</div>
+```
 
 ```
 //basic implementation of tree Node in java
@@ -113,8 +138,39 @@ VNode v = new VNode("div")
 
 # public class Renderer:
 
-- The Renderer class Renders the User inputed VNode tree structure.
-- And converts it to a Simple html String.
+- Renderer is responsible for transforming a Virtual node tree into HTML String.
+- Converts a user-defined VNode tree into a valid HTML String.
+- Traverses the node Structure and generates corresponding markup.
+- Acts as the bridge between the Virtual representation (VNode) and the actual output.
+
+- _Description:_
+- The Renderer processes the hierarchical structure of VNode objects and produces a serialized HTML representation that can be injected into the DOM.
+
+- _Example:_
+
+```
+//Java
+import com.juic.Core.VNode;
+
+class Main {
+    public static void main(String[] args) {
+
+        VNode app = new VNode("div")
+            .addChild(new VNode("h1").setText("hello world!"));
+
+        String html = Renderer.render(app);
+    }
+}
+```
+
+```
+//Html
+<div>
+    <h1>hello</h1>
+</div>
+```
+
+- Renderer class.
 
 ````
 //Renderer.java
@@ -185,8 +241,6 @@ public class Renderer {
 }
 ````
 
-## Question to Chatgpt:
+# React mounting mechanism:
 
-- _what is this As React has index.html with div id = root, how can I make a similar page for my juic framework in documentation terms?_
-
-- Basically trying to re-create the React mounting mechanism in your own framework.
+- React mounting
