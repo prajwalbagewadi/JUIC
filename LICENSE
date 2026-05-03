@@ -1,46 +1,42 @@
 JUIC Proprietary License
-Copyright (c) 2026 Prajwal Narayan Bagewadi
 
+Copyright (c) 2026 Prajwal Narayan Bagewadi
 All Rights Reserved.
 
-This software and associated documentation files (the "Software") are the
-exclusive property of Prajwal Narayan Bagewadi.
+This software and associated documentation files (the "Software") are the exclusive property of Prajwal Narayan Bagewadi.
 
 1. Ownership
    The Software is owned and maintained solely by Prajwal Narayan Bagewadi.
    All rights, title, and interest in and to the Software remain with the owner.
 
-2. Restrictions
+2. Permitted Use
+   You are granted a limited, non-exclusive, non-transferable, revocable license to use the Software in personal and commercial projects.
+
+   You MUST give appropriate credit to the original author (Prajwal Narayan Bagewadi) in any project where the Software is used.
+
+3. Restrictions
    You are NOT permitted to:
-   - Copy, modify, merge, or create derivative works of the Software
-   - Distribute, sublicense, lease, rent, or sell the Software
-   - Use the Software for commercial or non-commercial purposes
-   - Reverse engineer, decompile, or attempt to extract source logic
+
+   * Modify, adapt, or create derivative works of the Software
+   * Distribute, sublicense, lease, rent, or sell the Software
+   * Redistribute the source code in any form
+   * Reverse engineer, decompile, or attempt to extract source logic
 
    without explicit prior written permission from the owner.
 
-3. No License Granted
-   No rights or licenses, express or implied, are granted to any user
-   except with written authorization from the owner.
+4. No Redistribution
+   The Software may not be shared, published, or distributed publicly or privately without written permission.
 
-4. Permission Requests
-   To request permission for use, distribution, or modification,
-   contact:[+91 7498957937]
-   Email: [bagewadi.prajwal44@gmail.com]
+5. Permission Requests
+   To request permission for use beyond the scope of this license, contact:
+   Phone: +91 7498957937
+   Email: [bagewadi.prajwal44@gmail.com](mailto:bagewadi.prajwal44@gmail.com)
 
-5. Enforcement
-   Unauthorized use, reproduction, or distribution of this Software
-   may result in civil and/or criminal penalties and will be prosecuted
-   to the fullest extent permitted by law.
+6. Enforcement
+   Unauthorized use, reproduction, modification, or distribution of this Software may result in legal action.
 
-6. Disclaimer of Warranty
-   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-   EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
-   OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
-   NON-INFRINGEMENT.
+7. Disclaimer of Warranty
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
 
-7. Limitation of Liability
-   IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES,
-   OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT,
-   OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE
-   SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+8. Limitation of Liability
+   IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
