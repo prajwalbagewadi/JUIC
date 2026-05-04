@@ -5,6 +5,7 @@ Components
 Tailwind integration
 React architecture
 Server-side React like engine
+React, officially a library rather than a strict framework, follows principles of component-based architecture, declarative programming, and immutability.
 
 # Project?
 
