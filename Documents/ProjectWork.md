@@ -243,4 +243,79 @@ public class Renderer {
 
 # React mounting mechanism:
 
-- React mounting
+- Think of React mounting like putting your app inside an empty box on the page.
+- Take my app and attach it to this HTML element.
+
+1. Empty container in HTML
+
+```
+<div id="root"></div>
+```
+
+- This is just an empty placeholder.
+
+2. React targets that container
+
+```
+//js
+const root = document.getElementById("root");
+```
+
+- React finds the box.
+
+3. React renders your app into it
+
+```
+//js
+ReactDOM.createRoot(root).render(<App/>);
+```
+
+- React says: Put <App/> inside this root div.
+
+- _What React Actually Does Internally_
+
+1. Builds a virtual version of your UI (Virtual DOM).
+2. Converts it into real DOM elements
+3. Inserts those elements into #root.
+
+```
+<App/> -> Virtual DOM -> Real Html elements -> Inserted into #root.
+```
+
+- _Implementating the Mounting Mechanism:_
+
+- goal:
+
+```
+//java
+Juic.mount(app, "root");
+```
+
+- We need GWT to build the mechanism:
+- What is GWT?
+- GWT is a development toolkit that lets you write frontend web apps in java, and then compiles that java code into javascript so it can run in the browser.
+- In simple Terms:
+- You write Java.
+- GWT converts it to JavaScript.
+- Browser runs it like a normal web app.
+- How it Works:
+
+```
+Java Code(your app) -> GWT Compiler -> JavaScript -> Runs in Browser (index.html)
+```
+
+- _Example:_
+
+```
+//java
+public class App implements EntryPoint {
+    public void onModuleLoad() {
+        RootPanel.get("root").add(new Label("Hello from GWT"));
+    }
+}
+```
+
+- What happens:
+- GWT compiles this -> Javascript
+- Browser loads it.
+- Content appears inside <div id="root">

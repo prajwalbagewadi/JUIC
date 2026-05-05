@@ -21,5 +21,28 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    <!-- Source: https://mvnrepository.com/artifact/com.google.gwt/gwt-user -->
+    <dependency>
+      <groupId>com.google.gwt</groupId>
+      <artifactId>gwt-user</artifactId>
+      <version>2.9.0</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- Source: https://mvnrepository.com/artifact/com.google.gwt/gwt-dev -->
+    <dependency>
+      <groupId>com.google.gwt</groupId>
+      <artifactId>gwt-dev</artifactId>
+      <version>2.9.0</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- Source: https://mvnrepository.com/artifact/org.codehaus.mojo/gwt-maven-plugin -->
+    <dependency>
+      <groupId>org.codehaus.mojo</groupId>
+      <artifactId>gwt-maven-plugin</artifactId>
+      <version>2.9.0</version>
+      <scope>compile</scope>
+    </dependency>
   </dependencies>
 </project>
